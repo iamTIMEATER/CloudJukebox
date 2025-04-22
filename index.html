@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Jukebox</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleTheme()">🌗 Toggle Mode</button>
+  <a href="upload.html">
+    <button class="nav-btn">🎵 Go to Upload Page</button>
+  </a>
+  <h1>🎶 Cloud Jukebox</h1>
+
+  <div class="player">
+    <audio id="audioPlayer" controls>
+      <source id="audioSource" src="" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <ul class="playlist" id="playlist"></ul>
+
+  <!-- AWS SDK -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.814.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
