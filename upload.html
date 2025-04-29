@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Jukebox Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cloud Jukebox Upload</h1>
+    </header>
+
+    <nav>
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Mode</button>
+        <a href="index.html"><button class="nav-btn">Back to Main</button></a>
+    </nav>
+
+    <main>
+        <p>Select an MP3 file to upload:</p>
+        <input type="file" id="fileInput" accept=".mp3">
+        <button onclick="uploadFile()">Upload</button>
+        <progress id="uploadProgress" value="0" max="100" style="display: none;"></progress>
+        <p id="status"></p>
+
+        <div id="animated-bg">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+          </div>
+    </main>
+
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.814.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

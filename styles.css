@@ -1,0 +1,224 @@
+/* General styles */
+body {
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Light and Dark Theme */
+body.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Buttons */
+.toggle-btn, .nav-btn, button {
+  border: none;
+  padding: 12px 18px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Light Theme Buttons */
+body.light .toggle-btn, body.light .nav-btn, body.light button {
+  background: #222;
+  color: #fff;
+}
+body.light .toggle-btn:hover, body.light .nav-btn:hover {
+  background: #444;
+}
+
+/* Dark Theme Buttons */
+body.dark .toggle-btn, body.dark .nav-btn, body.dark button {
+  background: #0ff;
+  color: #000;
+}
+body.dark .toggle-btn:hover, body.dark .nav-btn:hover {
+  background: #00cccc;
+}
+
+/* Player Container */
+.player-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Playlist */
+.playlist li {
+  list-style: none;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Light Theme Playlist */
+body.light .playlist li {
+  background: #eee;
+  color: #121212;
+}
+body.light .playlist li:hover {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Dark Theme Playlist */
+body.dark .playlist li {
+  background: #222;
+  color: #fff;
+}
+body.dark .playlist li:hover {
+  background-color: #0ff;
+  color: #000;
+}
+
+/* Upload Input */
+input[type="file"] {
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Progress Bar */
+progress {
+  display: block;
+  margin-top: 10px;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  width: 80%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#searchInput::placeholder {
+  color: #ccc;
+}
+
+
+/* Light Theme Progress Bar */
+body.light progress {
+  accent-color: #0077ff;
+}
+
+/* Dark Theme Progress Bar */
+body.dark progress {
+  accent-color: cyan;
+}
+
+/* Light Theme Button */
+body.light .toggle-btn {
+  background: #222;
+  color: #fff;
+  box-shadow: 0 0 10px #aaa;
+}
+body.light .toggle-btn:hover {
+  background: #444;
+}
+
+/* Dark Theme Button */
+body.dark .toggle-btn {
+  background: cyan;
+  color: #000;
+  box-shadow: 0 0 10px cyan;
+}
+body.dark .toggle-btn:hover {
+  background: #00cccc;
+}
+
+
+/* Next Song Button */
+.next-btn {
+  background: #73d9f5;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0 10px #73d9f5;
+}
+.next-btn:hover {
+  background: #73d9f5;
+  transform: scale(1.05);
+}
+
+#animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  background: radial-gradient(circle, #ff00cc, #3333ff);
+  opacity: 0.4;
+  border-radius: 50%;
+  animation: morph 20s infinite alternate ease-in-out;
+  filter: blur(80px);
+  transition: background 1s ease-in-out;
+}
+
+.blob1 {
+  top: -20vmax;
+  left: -20vmax;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  bottom: -20vmax;
+  right: -20vmax;
+  animation-delay: 10s;
+  background: radial-gradient(circle, #00ffee, #0077ff);
+}
+
+body.light-mode .blob1 {
+  background: radial-gradient(circle, #ff9a9e, #fad0c4);
+}
+
+body.light-mode .blob2 {
+  background: radial-gradient(circle, #a1c4fd, #c2e9fb);
+}
+
+@keyframes morph {
+  0% {
+    transform: scale(0.7) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.4) translate(10vw, -5vh);
+  }
+  100% {
+    transform: scale(0.7) translate(-10vw, 5vh);
+  }
+}
